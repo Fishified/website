@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<title> Home: Jason Duguay, PhD. </title>
+
+<link rel = "stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<div class="content">
+
+        <!-- <div id="navbar">
+                <a class="active" href="javascript:void(0)">Home</a>
+                <a href="javascript:void(0)">News</a>
+                <a href="javascript:void(0)">Contact</a>
+        </div> -->
+              
+
+    <body>
+
+            <header>
+                    <div id="box"></div>
+                    
+
+
+            </header>
+                <hr>
+                <script>
+                    $(function(){
+                        $("#box").load('header.html');
+                        });
+                </script>
+<h6 id="demo"></h6>
+<script>
+$(function() {
+  var x = new Date(document.lastModified);
+  document.getElementById("demo").innerHTML = x;
+});
+</script>
+
+        <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("box");
+        var sticky = navbar.offsetTop;
+        $('box').width($('box').width());
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            } else {
+            navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+
+<iframe class="center" width=800 height=315 src="https://www.youtube.com/embed/_fhCyUTV6I8?rel=0&vq=hd1080" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+    <h1>  </h1>
+
+    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
+
+    <hr>
+    
+    <img id="myImg" src="depth.png" alt="2D contour plots" class = "center" style="width:80%;max-width:1000px">
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+        </script>
+
+    <h1> <a name="Background"> Background </a> </h1>
+
+    <p class="main">
+        Since 2012 I have been answering questions occurring at the cross-roads of hydraulic and environmental engineering. A large portion of this work has been devoted to improving fish passage through engineered hydraulic structures (i.e., roadway culverts and dams). 
+    </p>
+
+    <p class="main">
+        Both computational fluid dynamics (CFD) and experimental fluid methods have played important roles in my research. In particular, the open-sourced CFD model OpenFOAM, due to its strengths and immense flexibility, has proven a valuable tool in these projects. On the experimental front, stereoscopic particle image velocimetry, which provides three component vectors over a 2-D plane, has allowed me to ‘visualize’ flow fields to levels of spatial and temporal detail that would otherwise have been impossible using other experimental flow measurement techniques.      
+    </p>   
+
+    <p class="main">
+        Aside from my work in fish passage, I also have an interest in all things related to fluid mechanics, hydrotechnical work and fluvial systems. Recently, I compared a two-phase Euler-Euler computational fluid dynamics model to a comprehensive laboratory data set with the goal of assessing the model’s ability to model bubble driven recirculatory flow in a municipal waste-water treatment plant. I was also involved in validation work of the Vectrino Profiler performed at the Université de Sherbrooke. Soon, I will be embarking on a project using OpenFOAM to model suspended sediment transport loads through a municipal sediment trap near the mouth of river located in Southern Québec. Have a look at my Research projects page for in-depth looks at some of my work.
+    </p>
+
+    <p class="main">
+        My plan is to continue pursuing projects, either in academia or in industry, with a strong emphasis on hydrotechnics, ecological hydraulics and applied research. If you have a project idea or opportunity which you believe may benefit from my experience, don’t hesitate to get in contact, I would be happy to discuss.
+    </p>
+
+
+    <h1> <a name="Skills"> Technical skills </a> </h1>
+
+    <ul class="list">
+        <li> OpenFOAM (interFoam, twoPhaseEulerFoam, sedFoam, others) </li>
+        <li> FLOW-3D (free-surface 3D hydrotechnical CFD model) </li>
+        <li> Telemac2D (2D hydrodynamic model with sediment, tracer, thermal and pollutant transport capabilities) </li>
+        <li> Python programming for object-orientated programming (e.g., pyFVM, pyTracker3D, blockMeshBuilder), scripting and analysis</li>
+        <li> Experimental methods in fluid mechanics: </li>
+            <ul>
+                <li> stereoscopic particle image velocimetry (PIV) </li>
+                <li> acoustic doppler velocimetry (ADV) </li>
+                <li> optical void fraction probes for bubbly flows </li>
+                <li> dyed UV flourescent mobile-bed particle tracking velocimetry </li>
+                <li> 3D trajectory reconstruction using dual high-speed cameras </li>
+            </ul>
+        <li> Statistical methods </li>
+        <li> Computer vision application programming </li>
+    </ul>
+
+    <h1> <a name="Publications"> Publications </a> </h1>
+
+    <h2> Published: </h2>
+    <ul class="list">
+        <li> Duguay, J.M. and Foster, B. and Lacey, R.W.J. and Castro-Santos, T. (2018). Sediment infilling benefits rainbow trout passage in a baffled channel. Ecological Engineering, 125, 38-49. </li>
+
+        <li> Duguay, J.M. and Lacey, R.W.J. and Castro-Santos, T. (2018). Influence of baffles on upstream passage of brook trout and brown trout in an experimental box culvert. Canadian Journal of Fisheries and Aquatic Sciences, 76, 28-41. </li>
+
+        <li> Duguay, J.M. and Lacey, R.W.J. and Gaucher, J. (2017). A case study of a pool and weir fishway modeled with OpenFOAM and FLOW-3D. Ecological Engineering, 103, 31-42. </li>
+
+        <li> Duguay, J.M. and Lacey, R.W.J. (2015). Effect of Fish Baffles on the Hydraulic Roughness of Slip-Lined Culverts. Journal of Hydraulic Engineering (ASCE), 141(1), 04014065. </li>
+        
+        <li> Duguay, J.M., Jay Lacey, R.W. (2015). Numerical study of an innovative fish ladder design for perched culverts. Canadian Journal of Civil Engineering, 43 (2), 173-181. </li>
+    
+    </ul>
+
+    <h2> In review: </h2>
+
+    <ul class="list">
+        <li> Duguay, J.M. and Lacey, R.W.J. (2019). Experimental validation of a two-phase Euler-Euler approach for predicting bubble induced recirculation in a rectangular tank. Journal of Water Research. </li> 
+    </ul>
+
+    <h2> In preparation: </h2>
+
+    <ul class="list">
+        <li> Duguay, J.M. and Lacey, R.W.J. (2019). Experimental evaluation of Euler-Euler approach for modeling bed-load transport. </li> 
+    </ul>
+    <footer>
+            <div id="footer"></div>
+    </footer>
+
+    <script>
+            $(function(){
+                $("#footer").load('header.html');
+                });
+        </script>
+
+</div>
+
+</body>
+
+</html>
