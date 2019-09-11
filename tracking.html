@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <title> Home: Jason Duguay, PhD. </title>
+        
+        <link rel = "stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<div class="content">
+<body>
+
+        <header>
+                <div id="box"></div>
+        </header>
+            
+            <script>
+                $(function(){
+                    $("#box").load('header.html');
+                    });
+            </script>
+
+    <script>
+    window.onscroll = function() {myFunction()};
+    var navbar = document.getElementById("box");
+    var sticky = navbar.offsetTop;
+    $('box').width($('box').width());
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+        } else {
+        navbar.classList.remove("sticky");
+        }
+    }
+</script>   
+
+<p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
+
+<h6> Last updated: </h6>
+<h6 id="demo">  </h6>
+<script>
+    $(function() {
+      var x = new Date(document.lastModified);
+      document.getElementById("demo").innerHTML = x;
+    });
+    </script>
+
+<hr>   
+
+<h2> Effects of sediment depostion effects on 3D tracjectories of juvenile rainbow trout </h2>
+
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/_fhCyUTV6I8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class="main">
+    This work provides initial insights into how fish interact with low-velocity recirculatory zones in engineered fish passage structures. Such zones occur downstream of bed-mounted objects when water flows over them. Prior to this research, it has largely been held that fish benefit from these zones because they provide locations for fish to take refuge from high velocity oncoming flow. However, using a combination of high-speed 3D video tracking of live fish navigating an experimental flume and experimental flow characterisation techniques, we demonstrated that these recirculatory zones may actually detriment fish passage in certain circumstances.
+</p>        
+
+<p class="main">
+The detrimental mechanism is caused by fish being entrained in the recirculatory zone, which inhibits them from resting and ultimately causes them to abandon their attempt. Filling the recirculatory zone with sediment improved fish passage performance, by eliminating the turbulent recirculatory flow and helping ‘align’ the flow so fish can better maintain postural stability and navigate upstream. This study provided the proof of concept needed to continue further research investigating how fish interact with recirculatory zones. Future work will address understanding how larger individuals interact with larger scale recirculatory zones akin to those present in lifesize culverts. 
+</p>      
+    
+
+
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+    <!-- <div class="numbertext">1 / 3</div> -->
+    <img src="Images/sed_traj.JPG" class="center" height=100%>
+    <div class="sliderCaptionText center">Fig. 1: 3D trajectory of a juvenile trout navigating above the bed-mounted bar. Two syncronized Phantom high-speed video cameras running at 300 Hz captured simultaneously both a ventral and a profile view of the fish. These views were then imported into <i>pyTracker3D</i> to reconstruct the 3D trajectory  </div>
+    </div>
+
+    <div class="mySlides fade">
+    <!-- <div class="numbertext">2 / 3</div> -->
+    <img src="Images/recirculation.png" class="center" height=100% width=100% >
+    <div class="sliderCaptionText center">Fig. 2: Streamlines obtained from sPIV data of the flow field downstream of the bed-mounted bar. The length of the  recirculation zone is approximately that of the juvenile rainbow trout tested. </div>
+    </div>
+
+    <div class="mySlides fade">
+    <!-- <div class="numbertext">3 / 3</div> -->
+    <img src="Images/sed_wedge.JPG"  class="center" height=100%>
+    <div class="sliderCaptionText center">Fig. 3: Profile view of a bed-mounted bar with a sediment wedge placed in its lee. </div>
+    </div>
+
+    <div class="mySlides fade">
+    <!-- <div class="numbertext">3 / 3</div> -->
+    <img src="Images/sed_flume.JPG"  class="center" height=100% >
+    <div class="sliderCaptionText center">Fig. 4: Blender generated render of CAD drawing of the recirculatory experimental flume. Fish were allowed to volitionally enter the flume after being placed in the downstream holding area. </div>
+</div>
+
+    <div class="mySlides fade">
+    <!-- <div class="numbertext">3 / 3</div> -->
+    <img src="Images/sed_together.JPG"  class="center" height=100% >
+    <div class="sliderCaptionText center">Fig. 5: Centerline contour plots of hydrodyanmic variables estimated from two seperate sPIV planes taken upstream and downstream of the bed-mounted bar. The blue area in the top-left plot indicates flow returning towards the bar. This return flow proved difficult for fish to navigate. </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<br>
+<br>
+<h2> More details on this publication available in link: </h2>
+<ul class="list">
+    <li> <A HREF="https://www.sciencedirect.com/science/article/abs/pii/S0925857418303744" target="_blank"> Duguay, J.M. and Foster, B. and Lacey, R.W.J. and Castro-Santos, T. (2018). </A> Sediment infilling benefits rainbow trout passage in a baffled channel. Ecological Engineering, 125, 38-49. </li>
+</ul>
+
+<h1> Abstract </h1>
+
+    <p class="main">
+            OpenFOAM’s interFoam solver is validated for modeling the complex three dimensional flow field of a large pool and weir fishway. Numerical results from OpenFOAM and the commercial solver FLOW-3D are compared and validated with in situ experimental velocity, turbulence and water surface profiles. OpenFOAM and FLOW-3D produced similar flow fields. The models accurately predicted velocity magnitudes throughout the pool and the barrier velocity immediately downstream of the notch. The models over-predicted the width and depth of the jet issuing from the notch and significantly under-predicted turbulent kinetic energy levels within it. In both models a large roller occupies a generous volume of the sampled pool, the presence of which is not supported by experimental measurements. The findings demonstrate that interFoam coupled with the standard k − ϵ turbulence model is able to estimate barrier velocities, flow rates, turbulence magnitudes and depths to accuracies acceptable for fishway design evaluation.
+    </p>
+
+</div>
+</body>
+
+</html> 

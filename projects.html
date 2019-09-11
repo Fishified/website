@@ -4,20 +4,88 @@
 <head>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<title> On-going projects: Jason Duguay, PhD. </title>
+<title> Home: Jason Duguay, PhD. </title>
+
+<link rel = "stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
-<body>
-        <header>
-                <div id="box"></div>
-            </header>
-            
-             
-            <script>
-                $(function(){
-                    $("#box").load('header.html');
-                });
-                </script>
-</body>
-</html>
+<div class="content">
 
+        <!-- <div id="navbar">
+                <a class="active" href="javascript:void(0)">Home</a>
+                <a href="javascript:void(0)">News</a>
+                <a href="javascript:void(0)">Contact</a>
+        </div> -->
+            
+    <body>
+
+            <header>
+                    <div id="box"></div>
+            </header>
+                
+                <script>
+                    $(function(){
+                        $("#box").load('header.html');
+                        });
+                </script>
+
+        <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("box");
+        var sticky = navbar.offsetTop;
+        $('box').width($('box').width());
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            } else {
+            navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+
+    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
+
+    <h6> Last updated: </h6>
+    <h6 id="demo">  </h6>
+    <script>
+        $(function() {
+          var x = new Date(document.lastModified);
+          document.getElementById("demo").innerHTML = x;
+        });
+        </script>
+    
+    <hr>   
+    
+    <img id="myImg" src="Images/recirculation.png" alt="Streamlines showing recirculation zone in the lee of a bed-mounted bar" class = "center" style="width:80%;max-width:1000px">  
+    <h4> Streamlines showing recirculation zone in the lee of a bed-mounted bar. The data used to make this image was obtained using stereoscopic particle image velocimetry (sPIV) in an experimental flume. </h4>
+    
+    <h1> <a name="Projects"> Projects </a> </h1>
+
+    <p class="main">
+        Please click on the links below to be directed to a page presenting the most interesing aspects of the various research projects I have been involved in the past. The projects include keywords to help the reader understand the principal methods used in each project. Though I aim to keep this Projects page up-to-date, at the moment many other projects in which I have been involved are unfortunately not listed.  
+    </p>
+
+    <h2> Fish passage related: </h2>
+    <ul class="list">
+        <li> <A HREF="OFfishway.html"> OpenFOAM for fishway design</A></li>
+
+        <li> <A HREF="tracking.html"> Influence of sediment deposition on 3D trajectories of fish</A></li>
+
+        <li> <A HREF="turners.html"> Improving fish passage through culverts</A> </li>
+
+        <li> <A HREF="flow3DLadder.html"> Applying FLOW-3D for a fish ladder design</A> </li>
+        
+        <li> <A HREF="bubbles.html"> Modeling and measuring 3D bubble driven flows </A></li>
+
+        <li> <A HREF="telemacSediment.html"> Understanding suspended sediment fates using Telemac2D and Sisyphe </A></li>
+    
+    </ul>
+
+</div>
+
+</body>
+
+</html>

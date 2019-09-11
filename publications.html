@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<title> Home: Jason Duguay, PhD. </title>
+
+<link rel = "stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<div class="content">
+
+        <!-- <div id="navbar">
+                <a class="active" href="javascript:void(0)">Home</a>
+                <a href="javascript:void(0)">News</a>
+                <a href="javascript:void(0)">Contact</a>
+        </div> -->
+            
+    <body>
+            <header>
+                    <div id="box"></div>
+            </header>
+                
+                <script>
+                    $(function(){
+                        $("#box").load('header.html');
+                        });
+                </script>
+        <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("box");
+        var sticky = navbar.offsetTop;
+        $('box').width($('box').width());
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            } else {
+            navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+
+    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
+
+    <h6> Last updated: </h6>
+    <h6 id="demo">  </h6>
+    <script>
+        $(function() {
+          var x = new Date(document.lastModified);
+          document.getElementById("demo").innerHTML = x;
+        });
+        </script>
+    
+    <hr>   
+    
+    <img id="myImg" src="Images/recirculation.png" alt="Streamlines showing recirculation zone in the lee of a bed-mounted bar" class = "center" style="width:80%;max-width:1000px">
+    
+    <h4> Streamlines showing recirculation zone in the lee of a bed-mounted bar. The data used to make this image was obtained using stereoscopic particle image velocimetry (sPIV) in an experimental flume. </h4>
+    <!-- The Modal
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+        </script> -->
+
+    <h1> <a name="Publications"> Publications </a> </h1>
+
+    <p class="main">
+        The following sections present the titles of peer-reviewed technical articles which I have published during the course of my Master and Phd programs. I have also included the titles of articles that are presently in review and titles for articles that are currently under preparation.
+    </p>
+
+    <h2> Published: </h2>
+    <ul class="list">
+        <li> Duguay, J.M. and Foster, B. and Lacey, R.W.J. and Castro-Santos, T. (2018). Sediment infilling benefits rainbow trout passage in a baffled channel. Ecological Engineering, 125, 38-49. </li>
+
+        <li> Duguay, J.M. and Lacey, R.W.J. and Castro-Santos, T. (2018). Influence of baffles on upstream passage of brook trout and brown trout in an experimental box culvert. Canadian Journal of Fisheries and Aquatic Sciences, 76, 28-41. </li>
+
+        <li> Duguay, J.M. and Lacey, R.W.J. and Gaucher, J. (2017). A case study of a pool and weir fishway modeled with OpenFOAM and FLOW-3D. Ecological Engineering, 103, 31-42. </li>
+
+        <li> Duguay, J.M. and Lacey, R.W.J. (2015). Effect of Fish Baffles on the Hydraulic Roughness of Slip-Lined Culverts. Journal of Hydraulic Engineering (ASCE), 141(1), 04014065. </li>
+        
+        <li> Duguay, J.M., Jay Lacey, R.W. (2015). Numerical study of an innovative fish ladder design for perched culverts. Canadian Journal of Civil Engineering, 43 (2), 173-181. </li>
+    
+    </ul>
+
+    <h2> In review: </h2>
+
+    <ul class="list">
+        <li> Duguay, J.M. and Lacey, R.W.J. (2019). Experimental validation of a two-phase Euler-Euler approach for predicting bubble induced recirculation in a rectangular tank. Currently under revision in the Journal of Water Research. </li> 
+    </ul>
+
+    <h2> In preparation: </h2>
+
+    <ul class="list">
+        <li> Duguay, J.M. and Lacey, R.W.J. (2019). Experimental evaluation of Euler-Euler approach for modeling bed-load transport. </li> 
+    </ul>
+    <footer>
+            <div id="footer"></div>
+    </footer>
+
+    <script>
+            $(function(){
+                $("#footer").load('header.html');
+                });
+        </script>
+
+</div>
+
+</body>
+
+</html>
