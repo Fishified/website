@@ -21,29 +21,31 @@
             
     <body>
 
-            <header>
-                    <div id="box"></div>
-            </header>
-                
-                <script>
-                    $(function(){
-                        $("#box").load('header.html');
-                        });
-                </script>
-
+        <header>
+                <div id="box"></div>
+        </header>
+            
         <script>
+            $(function(){
+                $("#box").load('header.html');
+                });
+        </script>
+
+        <!-- <script>
         window.onscroll = function() {myFunction()};
         var navbar = document.getElementById("box");
         var sticky = navbar.offsetTop;
-        $('box').width($('box').width());
+        
         function myFunction() {
+            
             if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
+            
             } else {
             navbar.classList.remove("sticky");
             }
         }
-    </script>
+        </script> -->
 
 
     <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
@@ -61,7 +63,7 @@
     
     
     <img id="myImg" src="Images/recirculation.png" alt="Streamlines showing recirculation zone in the lee of a bed-mounted bar" class = "center" style="width:80%;max-width:1000px">
-    <p class="inset">Streamlines downstreamin the recirculation zone of a bed-mounted bar. The data used to make this image was obtained using stereoscopic particle image velocimetry (sPIV) in an experimental flume.</p>
+    <p class="caption">Figure caption: Streamlines downstreamin the recirculation zone of a bed-mounted bar. The data used to make this image was obtained using stereoscopic particle image velocimetry (sPIV) in an experimental flume.</p>
     
     
 
