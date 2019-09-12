@@ -125,11 +125,20 @@ html {
         max-width: 600px;
         margin-right: 15%;
         margin-left: 15%;
-        font-size:13px;
+        
         padding-top: 0px;
         padding-bottom: 0px;
       }
 
+      p.caption {
+        text-align: justify;
+        max-width: 600px;
+        margin-right: 15%;
+        margin-left: 15%;
+        font-size:13px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
       .main {
           text-align: justify;
           max-width: 1000px;
