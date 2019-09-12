@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <title> Home: Jason Duguay, PhD. </title>
+        
+        <link rel = "stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<div class="content">
+<body>
+
+    <header>
+            <div id="box"></div>
+    </header>
+        
+    <script>
+        $(function(){
+            $("#box").load('header.html');
+            });
+    </script>
+
+    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
+
+    <h6> Last updated: </h6>
+    <h6 id="demo">  </h6>
+    <script>
+        $(function() {
+        var x = new Date(document.lastModified);
+        document.getElementById("demo").innerHTML = x;
+        });
+        </script>
+    <hr>   
+
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+
+    <h2 class="title"> Validating advances in 3D numerical modeling of sediment transport phenomena</h2>
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img src="Images/sed_traj.JPG" class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 1: 3D trajectory of a juvenile trout navigating above the bed-mounted bar. Two syncronized Phantom high-speed video cameras running at 300 Hz captured simultaneously both a ventral and a profile view of the fish. These views were then imported into <i>pyTracker3D</i> to reconstruct the 3D trajectory  </p>
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">2 / 3</div> -->
+            <img src="Images/recirculation.png" class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 2: Streamlines obtained from sPIV data of the flow field downstream of the bed-mounted bar. The length of the  recirculation zone is approximately that of the juvenile rainbow trout tested. </p>
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/sed_wedge.JPG"  class = "center" style="max-width:100%;max-height:400px">
+            <p class="caption">Fig. 3: Profile view of a bed-mounted bar with a sediment wedge placed in its lee. </div>
+        </p>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/sed_flume.JPG"  class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 4: Blender generated render of CAD drawing of the recirculatory experimental flume. Fish were allowed to volitionally enter the flume after being placed in the downstream holding area. </p>
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/sed_together.JPG"  class = "center" style="max-width:100%;max-height:400px">
+            <p class="caption">Fig. 5: Centerline contour plots of hydrodyanmic variables estimated from two seperate sPIV planes taken upstream and downstream of the bed-mounted bar. The blue area in the top-left plot indicates flow returning towards the bar. This return flow proved difficult for fish to navigate. </div>
+        </p>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<br>
+<br>
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+
+    <h2> Objectives:</h2>
+    <p class="inset center"> 1. Answer the question: <i>Is sedFoam accurate at simultaneously modeling 3D bedload applications? </i></p>
+
+    <p class="inset center"> 2. Determine if the model can predict the temporal evolution of the 3D bathymetry of the scouring bed.</p>
+
+    <p class="inset center"> 3. Verify the coupling occurring between the continously scouring sediment bed and the overlying hydrodynamic flow field.</p> 
+
+    <p class="inset center"> 4. Evaluate the fidelity of sedFoam to replicate the 3D deposition pattern in a downstream sediment trap.</p>        
+
+    <h2> Publication details: </h2>
+    <p class="inset center"> The results of this work will appear as a publication in 2020.</p>
+
+    <p class="main">
+    A recently developed OpenFOAM solver <i>sedFoam</i> is validated for its ability to replicate an extensive set of experimental data. In contrast to more traditional approaches to 3D sediment modeling, <i>sedFoam</i> solves both the water and sediment as independent phases (a two phase flow), with a continuity and momentum equation for each phase. The field parameters specific to each phase (i.e., their velocity field) are however strongly coupled. This means that the movement of one phase will invariably cause movement in the other phase. This so called Euler-Euler approach (i.e., each field is considered within a Eulerian framework) is relatively new in the field of sediment modeling. The method is attractive over its predecessors, principally because the Euler-Euler approach can account for virtually all the possible inter-phase forces involved in a sediment-fluid system (e.g., drag, virtual mass, lateral lift, intergranular stresses). Therefore, few if any, emphirical assumptions are required - meaning only a comphrehensive description of the fundamental physics describing sediment-fluid interactions are all that are required. 
+    </p>
+    
+    <p class="main">
+    This work was performed in the Hydraulics laboratory at the Université de Sherbrooke in a controlled laboratory flume. A flow was applied over an initially static bed of approximately uniform sediment grains. A thin layer of sediment quickly mobilizes due to the shear stress applied by the flowing water. The mobilised sediment grains are deposited and collected in a trap downstream. With time, a 3D scour pattern develops on the bed and a 3D deposition pattern forms in the downstream trap. A variety of experimental methods were applied to provide experimental data for model validation. This methods include: 
+    </p>
+
+    <p class="inset center"> Multi-particle ultra-violet flourescent particle tracking to estimate the velocity field of the mobilized bed layer.  </p>
+
+    <p class="inset center"> Multi-plane stereoscopic particle image velocimetry to reconstruct the time-averaged initial conditions of the water phase. </p>
+    
+    <p class="inset center"> High-density 3D photogrammetric reconstructions of the erosion and deposition patterns. </p> 
+    
+    <p class="inset center"> Instantaneous short duration sPIV measurements of the coupled hydrodynamic and sediment flow fields. </p>      
+
+    <p class="inset center"> Empirical sediment flux measurements. </p>      
+    
+
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+    <div id="player" class="center"></div>
+    <script src="//www.youtube.com/iframe_api"></script>
+
+    <script>
+        /**
+        * Put your video IDs in this array
+        */
+        var videoIDs = [
+            'W-vYpOJgS-s',
+            'sU8o6NY2L30',
+            '_fhCyUTV6I8'
+        ];
+
+        var player, currentVideoId = 0;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '400',
+                width: '100%',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.loadVideoById(videoIDs[currentVideoId]);
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                currentVideoId++;
+                if (currentVideoId < videoIDs.length) {
+                    player.loadVideoById(videoIDs[currentVideoId]);
+                }
+            }
+        }
+    </script>
+
+    <br>
+    <p class="caption">
+        Video caption: Profile views of juvenile rainbow trout (Oncorhynchus mykiss) navigating a bed-mounted bar (1st video) and the same bar with sediment obstructing the recirculation zone it the bar's lee (2nd video). The third video shows the reconstructed 3D trajectory of the fish in the 1st video. Average cross-sectional velocity in flume is 0.75 m/s, however just above the baffle it can be in excess of 1.2 m/s. Video was taken at 300 Hz and therefore the fish swims much faster in real-time.
+    </p>
+
+
+<br>
+
+<br>
+<br>
+<br>
+
+
+</div>
+</body>
+
+</html> 
