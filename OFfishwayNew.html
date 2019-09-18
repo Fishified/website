@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <title> Home: Jason Duguay, PhD. </title>
+        
+        <link rel = "stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<div class="content">
+<body>
+
+    <header>
+            <div id="box"></div>
+    </header>
+        
+    <script>
+        $(function(){
+            $("#box").load('header.html');
+            });
+    </script>
+
+    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
+
+    <h6> Last updated: </h6>
+    <h6 id="demo">  </h6>
+    <script>
+        $(function() {
+        var x = new Date(document.lastModified);
+        document.getElementById("demo").innerHTML = x;
+        });
+        </script>
+    <hr>   
+
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+    <h2 class="title">Using OpenFOAM's <i>interFoam</i> solver for fishway modeling</h2>
+
+    
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img src="Images/pass_swirls.JPG" class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 1: Streamlines showing the 3D pattern flow is expected to adopt through the pool and weir fishway using OpenFOAM. Water flows over the upstream weir (left) and through the pool before exiting over the downstream weir (right).</p>
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">2 / 3</div> -->
+            <img src="Images/pass_together.JPG" class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 2: Geometry of the modeled fishway. The red and orange colored weirs delimit the pool in which the measurements and analysis were performed. </p>
+        </div>
+
+        
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/pass_data1.JPG"  class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 3: Comparative scatter plots of velocity components sampled over a large number of points in the OpenFOAM and FLOW-3D model.</p>
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/pass_TKE.JPG"  class = "center" style="max-width:100%;max-height:400px">
+            <p class="caption">Fig. 4: Comparison between numerically predicted turbulent kinetic energy (TKE) for OpenFOAM and FLOW-3D with experimentally measured TKE values obtained using a Acoustic Doppler Velocimeter in the pool. </div>
+        </p>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<br>
+<br>
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+
+    <h2> Objectives:</h2>
+    <p class="inset center"> 1. Answer the question: <i>Can the freely available and open-sourced CFD solver OpenFOAM predict the flow field in a large fishway to the same level of accuracy as the commercial solver FLOW-3D?</i></p>
+
+    <p class="inset center"> 2. Understand the strengths and weaknesses of the Reynolds averaged approach for predicting the turbulent velocity field, depths and other metrics important to fishway design.</p>
+
+    
+
+    <h2> Project highlights: </h2>
+
+    <p class="main">
+        This project was performed in collaboration with a hydroelectric company in Eastern Canada. Their hydraulic engineers where interested in incorporating OpenFOAM further into their operations. They expressed a need to verify OpenFOAM's interFoam solver's ability to model the complex 3D flow inside of a large technical pool and weir fishway. The results from OpenFOAM were compared to experimental turbulent velocity data and depth profiles taken in-situ using an acoustic Doppler velocimeter. The modeled results compared well to the experimental data as well as modeled results from the commercial CFD solver FLOW-3D. </p>
+     
+    <h3> Interested in obtaining 3D numerical modeling of a fishway design? Please contact me.</h3>
+
+    <h2> Instrumentation, methods and software used: </h2>
+    <ul class="list">
+        <li> <b>OpenFOAM's</b> <i>interFoam</i> solver for modeling two-phase (i.e., air-water) flows with a volume-of-fluid interface tracking method </li>
+
+        <li> <b>FLOW-3D</b> commercial software commonly applied in the field of hydrotechnical engineering</li>
+
+        <li> <b>Tecplot 360</b> for postprocessing of CFD results</li>
+
+        <li> <b>Acoustic Doppler velocimetry</b> to measure turbulent velocity field in fishway pool </li>
+
+        <li> <b>In situ</b> data measurement on a large functioning fishway</li>
+    </ul>
+
+
+    <h2> Publication details: </h2>
+    <p class='main'><A HREF="https://www.sciencedirect.com/science/article/abs/pii/S0925857417300502" target="_blank">  Duguay, J.M. and Lacey, R.W.J. and Gaucher, J. (2017)</A>. A case study of a pool and weir fishway modeled with OpenFOAM and FLOW-3D. Ecological Engineering, 103, 31-42.
+    </p>
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+<br>
+<br>
+<br>
+<br>
+
+</div>
+</body>
+
+</html> 

@@ -42,6 +42,18 @@
 
     <h2 class="title"> Modeling sediment deposition in an in-river sediment trap using Telemac2D and Sisyphe</h2>
 
+    
+    
+
+    <iframe class="embed-responsive-item center"id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/PPlAtpLWRqs?&autoplay=1&loop=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=PPlAtpLWRqs"
+    frameborder="0" allowfullscreen></iframe>
+
+    
+    <br>
+    <p class="caption">
+        Video caption: 
+    </p>
+
 
     <div class="slideshow-container">
 
@@ -152,58 +164,10 @@
 <!------------------------------------------------>
 <!------------------------------------------------>
 
-    <div id="player" class="center"></div>
-    <script src="//www.youtube.com/iframe_api"></script>
-
-    <script>
-        /**
-        * Put your video IDs in this array
-        */
-        var videoIDs = [
-            'W-vYpOJgS-s',
-            'sU8o6NY2L30',
-            '_fhCyUTV6I8'
-        ];
-
-        var player, currentVideoId = 0;
-
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '400',
-                width: '100%',
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            event.target.loadVideoById(videoIDs[currentVideoId]);
-        }
-
-        function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.ENDED) {
-                currentVideoId++;
-                if (currentVideoId < videoIDs.length) {
-                    player.loadVideoById(videoIDs[currentVideoId]);
-                }
-            }
-        }
-    </script>
-
-    <br>
-    <p class="caption">
-        Video caption: Profile views of juvenile rainbow trout (Oncorhynchus mykiss) navigating a bed-mounted bar (1st video) and the same bar with sediment obstructing the recirculation zone it the bar's lee (2nd video). The third video shows the reconstructed 3D trajectory of the fish in the 1st video. Average cross-sectional velocity in flume is 0.75 m/s, however just above the baffle it can be in excess of 1.2 m/s. Video was taken at 300 Hz and therefore the fish swims much faster in real-time.
-    </p>
-
-
-<br>
-
 <br>
 <br>
 <br>
-
+<br>
 
 </div>
 </body>
