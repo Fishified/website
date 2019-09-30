@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <title> Home: Jason Duguay, PhD. </title>
+        
+        <link rel = "stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<div class="content">
+<body>
+
+    <header>
+            <div id="box"></div>
+    </header>
+        
+    <script>
+        $(function(){
+            $("#box").load('header.html');
+            });
+    </script>
+
+    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
+
+    <h6> Last updated: </h6>
+    <h6 id="demo">  </h6>
+    <script>
+        $(function() {
+        var x = new Date(document.lastModified);
+        document.getElementById("demo").innerHTML = x;
+        });
+        </script>
+    <hr>   
+
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+
+    <h2 class="title"> Improving fish passage through culverts with baffles </h2>
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img src="Images/turners_flume.JPG" class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 1: Rendered image of the experimental flume used to perform this study. The ABiKiS flume (Aquatic Biomechanics and Kinematic Research Station) is situated at the United States Geological Survey-Leetown Science Center in Turners Falls, Massachusetts. Fish were placed in the downstream staging area and allowed to volitionally make attempts up the flume during the trial period.</p>
+        </div>
+
+
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/turners_baffles.png"  class = "center" style="max-width:90%;max-height:400px">
+            <p class="caption">Fig. 2: The three different baffle configurations tested. Trials of the bare flume were also performed. The most spatially dense spoiler baffle configuration is depicted on the left, the full-width weir baffle in the center and the lower density spoiler baffle configuration on the right.</div>
+        </p>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/turners_results.png"  class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 3: Maximum distances of ascent for the various baffle conditions, species of trout and flow rates tested. The bare flume is seen to be the least effective at improve the maximum distances of ascent. The weir baffles, in contrast, allow even the smallest fish tested to reach the upper reach of the test section.</p>
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/turners_cameras.JPG"  class = "center" style="max-width:100%;max-height:400px">
+            <p class="caption">Fig. 4: View of the flume looking downstream towards the staging area. The mirrors were put into place to capture ventral views of the ascending trout. Each mirror was dedicated a Raspberry Pi to record the ascending fish over the trial duration. </div>
+        </p>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/turners_mirrors.JPG"  class = "center" style="max-width:100%;max-height:400px">
+            <p class="caption">Fig. 5: View of the flume looking upstream with the weir baffles in place. The flow rapidly attains its normal depth downstream of the hydraulic jump that occurs over the hydraulically rougher section where the weir baffles were installed. </div>
+        </p>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">2 / 3</div> -->
+            <img src="Images/turners_dmax.JPG" class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 6: Statistically derived survival curves showing the proportion of attempting trout expected to attain a given distance over the test section. In general, the bare flume was the most challenging, smaller fish presented more difficulty, smaller fish benefited most from the weir baffles, slight improvements were made with a denser spoiler baffle configuration and brown trout demonstrated lower maximum distances of ascent than brook trout.  </p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<br>
+<br>
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+
+    <h2> Objectives:</h2>
+    <p class="inset center"> 1. Investigate how various baffle configurations improve the maximum distances of ascent of trout attempting passage over an exterior flume bed simulating a smooth-bottomed culvert.</p>
+
+    <p class="inset center"> 2. Understand the influence that species, body-length and flow rate have on maximum distances of ascent.  </p>  
+
+    <h2> Publication details: </h2>
+
+    <p class="inset center"> <A HREF="https://www.nrcresearchpress.com/doi/abs/10.1139/cjfas-2017-0453?journalCode=cjfas" target="_blank">Duguay, J.M. and Lacey, R.W.J. and Castro-Santos, T. (2018)</A>. Influence of baffles on upstream passage of brook trout and brown trout in an experimental box culvert. Canadian Journal of Fisheries and Aquatic Sciences, 76, 28-41. </p>
+
+
+    <p class="main">
+        The experimental work of this study was done at the United States Geological Survey-Leetown Science Center in their outdoor Aquatic Biomechanics and Kinematic Research Station (ABiKiS). The motivation for the study was to continue improving our understanding of how various baffle forms can improve upstream passage of trout through roadway culverts. The results show that not all baffles are equal, and that fish passage success over each treatment of baffles is highly subject to the species and life-stage of the trout.
+    </p>        
+
+
+    <h2> Instrumentation, methods and software used: </h2>
+    <ul class="list">
+        <li> 35 m long (we only used 15 m), 0.64 m wide flume (ABiKiS)  </li>
+
+        <li> Wild brook (Salvelinus fontinalis) and brown trout (Salmo trutta) </li>
+
+        <li> Multi-antenna TIRIS radio frequency identification system</li>
+
+        <li> <i>pyTIRIS</i> written in Python (simplifies raw TIRIS data analysis)</li>
+
+        <li> R Studio for statistical analysis</li>
+    </ul>
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+    <div id="player" class="center"></div>
+    <script src="//www.youtube.com/iframe_api"></script>
+
+    <script>
+        /**
+        * Put your video IDs in this array
+        */
+        var videoIDs = [
+            'HfHenjDWC68',
+            '-lR7YcgMbg0'
+        ];
+
+        var player, currentVideoId = 0;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '400',
+                width: '100%',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.loadVideoById(videoIDs[currentVideoId]);
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                currentVideoId++;
+                if (currentVideoId < videoIDs.length) {
+                    player.loadVideoById(videoIDs[currentVideoId]);
+                }
+            }
+        }
+    </script>
+
+    <br>
+    <p class="caption">
+        Video caption: Profile views of juvenile rainbow trout (Oncorhynchus mykiss) navigating a bed-mounted bar (1st video) and the same bar with sediment obstructing the recirculation zone it the bar's lee (2nd video). The third video shows the reconstructed 3D trajectory of the fish in the 1st video. Average cross-sectional velocity in flume is 0.75 m/s, however just above the baffle it can be in excess of 1.2 m/s. Video was taken at 300 Hz and therefore the fish swims much faster in real-time.
+    </p>
+
+
+<br>
+
+<br>
+<br>
+<br>
+
+
+</div>
+</body>
+
+</html> 
