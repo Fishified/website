@@ -65,6 +65,10 @@ html {
         margin-left: 0px 0;
         }
 
+      li.blog{
+          margin: 10px 0;
+      }
+
       li{
           margin: 1px 0;
       }

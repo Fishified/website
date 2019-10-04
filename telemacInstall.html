@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<title> Home: Jason Duguay, PhD. </title>
+
+<link rel = "stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<div class="content">
+
+        <!-- <div id="navbar">
+                <a class="active" href="javascript:void(0)">Home</a>
+                <a href="javascript:void(0)">News</a>
+                <a href="javascript:void(0)">Contact</a>
+        </div> -->
+            
+    <body>
+            <header>
+                    <div id="box"></div>
+            </header>
+                
+                <script>
+                    $(function(){
+                        $("#box").load('header.html');
+                        });
+                </script>
+        <!-- <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("box");
+        var sticky = navbar.offsetTop;
+        $('box').width($('box').width());
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            } else {
+            navbar.classList.remove("sticky");
+            }
+        }
+    </script> -->
+
+
+    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
+
+    <h6> Last updated: </h6>
+    <h6 id="demo">  </h6>
+    <script>
+        $(function() {
+          var x = new Date(document.lastModified);
+          document.getElementById("demo").innerHTML = x;
+        });
+        </script>
+    
+    <hr>   
+    
+    <img id="myImg" src="Images/FirstProblem.PNG" alt="First screen of terror when trying to use Open Telemac-Mascaret's automatic installer" class = "center" style="max-width:100%;max-height:300px">
+    
+    <p class="caption center">Figure caption: The first screen of terror you might have come across when trying to use Open Telemac-Mascaret's so called 'automatic' installer available for download on their website.</p>
+    <!-- The Modal
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+        </script> -->
+
+    
+    
+    <h2> <u>Posted October 4th, 2019 </u> </h2>
+    <h2> Installing Open Telemac-Mascaret with the not so 'automatic' installer on Windows 10: </h2>
+
+    <p class="main">
+        The steps below will hopefully help you install the Open Telemac-Mascaret suite of solvers on your Window's 10 machine. Feel free to contact me if the installation steps are not working for you.
+    </p>
+
+
+    <ol>
+
+        <li class="blog" > Download the opentelemacmascaret-5.2-windows-installer.exe from the <A HREF="http://www.opentelemac.org/index.php/download" style="text-decoration: none;" target="_blank"> open telemac website</A>  (you will need to create an account first). </li> 
+
+        <li class="blog"> Double-click the <i>opentelemacmascaret-5.2-windows-installer.exe</i>  </li>  
+        
+        <li class="blog">
+        Follow on-screen instructions and accept all default values. You will need to be present during this part to click ‘Next’ and ‘Finish’. This step will install a folder with name and location <i>C:\opentelemac-mascaret</i> and add a bunch of prerequisite files to it. Keep clicking 'yes' or 'okay' on whatever the installation file pops-up, eventually it will crash with an error. No need to worry …
+        </li>
+
+        <li class="blog">
+            Open your Environment Variables by searching for <i>Environment Variables</i> in the task bar, then select the <i>Path</i> variable in the <i>System Variables</i> dialog, then click <i>Edit</i>.  Make sure that <i>C:\Program Files\TortoiseSVN\bin</i> is present in the list, if not, add it by clicking on <i>New</i> and adding <i>C:\Program Files\TortoiseSVN\bin</i> as a new entry. Once you are done this, double-click again on the <i>opentelemacmascaret-5.2-windows-installer.exe</i>. 
+        </li>
+
+        <li class="blog">
+            This time, when prompted to <i>Select Components</i>, deselect <i>Software Installation: Pre-requisites</i>. The ghosted-out <i>open TELEMAC MASCARET + source code</i> should be checked, not that you have the choice to uncheck it. 
+        </li>
+
+        <li class="blog">
+            If everything worked correctly up to this point, you will have the choice to install v8p0. Check the v8p0 box and click <i>next</i>, <i>okay</i> or whatever is needed to get to the next step. Again, if everything works correctly, you should see a bunch of lines of text printing out on a black command prompt. This is good, these are the source code files being downloaded using the SVN client. It can take up to 30 minutes to download them all, so be patient …
+        </li>
+
+        <li class="blog">
+            Once everything is downloaded, you will be prompted to start the compilation of the source code. Click yes. It will shortly crash with an error. Again, have no fear.
+        </li>
+
+        <li class="blog">
+        To fix the crash, you need to replace the C:\opentelemac-mascaret\v8p0\configs\systel_v8p0.cfg with this modified <A HREF="systel_v8p0.cfg" style="text-decoration: none;" target="_blank"> systel_v8p0.cfg</A> file. 
+        </li>
+
+        <li class="blog">
+        On your desktop, there should now be a shortcut called TELEMAC v8p0. Double-click on it. Write the following command out in the command prompt: <i>compileTELEMAC.py -f C:\opentelemac-mascaret\v8p0\configs\systel_v8p0.cfg</i> and hit <i></i>Enter</i>. 
+        </li>
+
+        <li class="blog">
+            If everything went well up until now the compilation should start and you will see lines printing out in the command prompt. After 30 or so minutes it will likely end with an error (Missing cmd_obj_c in your configuration file to compile mascaret C dependencies). This error is because the Mascaret module compilation did not work. Unless you really need to use Mascaret (a 1D flow model) then you don't need to worry. All of the other modules should have been installed correctly. And you will be able to use the TELEMAC v8p0 command prompt to launch your simulations. 
+        </li>
+    </ol>
+
+
+    
+
+
+    
+    <footer>
+            <div id="footer"></div>
+    </footer>
+
+    <script>
+            $(function(){
+                $("#footer").load('header.html');
+                });
+        </script>
+
+</div>
+
+</body>
+
+</html>
