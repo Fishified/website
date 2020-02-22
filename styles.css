@@ -3,6 +3,16 @@ html {
     
 }
 
+@import "https://cdn.rawgit.com/google/code-prettify/master/styles/desert.css";
+$lightGray: #fafafa;
+$medBlue: #9baecf;
+$char: #292929;
+
+pre {
+  margin: 10%;
+}
+
+
 #navbar {
     overflow: hidden;
     height: 30px;

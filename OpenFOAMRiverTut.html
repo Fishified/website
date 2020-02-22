@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149579272-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149579272-1');
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<title> Home: Jason Duguay, PhD. </title>
+
+<link rel = "stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<div class="content">
+
+        <!-- <div id="navbar">
+                <a class="active" href="javascript:void(0)">Home</a>
+                <a href="javascript:void(0)">News</a>
+                <a href="javascript:void(0)">Contact</a>
+        </div> -->
+            
+    <body>
+            <header>
+                    <div id="box"></div>
+            </header>
+                
+                <script>
+                    $(function(){
+                        $("#box").load('header.html');
+                        });
+                </script>
+        <!-- <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("box");
+        var sticky = navbar.offsetTop;
+        $('box').width($('box').width());
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            } else {
+            navbar.classList.remove("sticky");
+            }
+        }
+    </script> -->
+
+
+    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Concordia University <br> Montréal, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
+
+    <h6> Last updated: </h6>
+    <h6 id="demo">  </h6>
+    <script>
+        $(function() {
+          var x = new Date(document.lastModified);
+          document.getElementById("demo").innerHTML = x;
+        });
+        </script>
+    
+    <hr>   
+    
+ 
+    <!-- The Modal
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+        </script> -->
+
+        <div id="player" class="center"></div>
+    <script src="//www.youtube.com/iframe_api"></script>
+
+    <script>
+        /**
+        * Put your video IDs in this array
+        */
+        var videoIDs = [
+            '571zuCEnLb4',
+        ];
+
+        var player, currentVideoId = 0;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '400',
+                width: '100%',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+        function onPlayerReady(event) {
+            event.target.loadVideoById(videoIDs[currentVideoId]);
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                currentVideoId++;
+                if (currentVideoId < videoIDs.length) {
+                    player.loadVideoById(videoIDs[currentVideoId]);
+                }
+            }
+        }
+    </script>
+
+    <br>
+    <p class="caption">
+        Video caption: Here are some preliminary results from the coarse mesh that can be obtained after completing step 7. The top row is the velocity magnitude (left) and scalar concentration (right) at the surface (70 m). The bottom row is the velocity magnitude and scalar concentration 1 m below the surface. The passive scalar (red) is injected through the Neigette tributary (left hand side) and provides a good qualitative idea of how the tributaries' flows are mixing.
+    </p>
+
+
+
+    <h2> <u>Updated February 21st, 2020 </u> </h2>
+    <h2> OpenFOAM River modeling tutorials </h2>
+
+        <p class="main">
+        Hello! If you are interested in river modeling using OpenFOAM, you are in the right place. But feel free to have a look around the site to see what else I have been up to. <p>
+        
+        <p class="main">
+        I embarked on a postdoctoral project in the Department of Geography, Planning and Environment at Concordia University in January 2020. The topic of the postdoc is to apply Large-eddy simulations (or Detached-eddy simulations) using OpenFOAM to gain insights on mixing processes at river confluences. I thought it would be an interesting exercise to document my complete workflow as a set of YouTube videos and make the development of the code(s) openly available to those, who in the future, may be interested in applying OpenFOAM to modeling fluvial systems. </p>
+        
+        <p class="main">
+        The subject of the tutorial is the Mitis-Neigette confluence located in eastern, Québec, Canada. The confluence was chosen in part because of the extensive body of data that has been collected at the site and, in part because of the often strong suspended sediment gradients that occur between the Mitis and Neigette rivers. These gradients help tremendously with visualizing the subsurface turbulent 'billows' that occur along the mixing interface of the confluence and which contribute significantly to lateral mixing along the post-confluent channel. </p>
+        
+        <p class="main">
+        As I add new 'parts' to my model, I will add new videos and updates. I have just begun this project and it is my first endeavor into confluence modeling with OpenFOAM, so there are undoubtedly many more topics which I am sure you find of interest.   
+        </p>
+
+ 
+    <p class="main"><A HREF="https://github.com/Fishified/OpenFOAMRiverModeling" target="_blank"> Follow this link </A> to be directed to the GitHub repository to download the necessary data, python and OpenFOAM case files to follow along (click on the green bottom 'Clone or download' on the right hand side).</p>
+
+    <p class="main"><A HREF="https://www.youtube.com/watch?v=Xdn9Lt_sgFo&list=PLh9IK2idtkF6N4nN5evHxJHjhGBzZ-UIu" target="_blank"> Follow this link </A> to watch all the videos in a YouTube playlist. </p>
+</div>
+
+</body>
+
+</html>
