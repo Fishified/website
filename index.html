@@ -1,101 +1,33 @@
 <!doctype html>
 <html>
 
-<head>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149579272-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-149579272-1');
-</script>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<title> Home: Jason Duguay, PhD. </title>
 
-<link rel = "stylesheet" href="styles.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>  
+$(function(){
+    $('#header').load('../common/reuseHeader.html');
+});
 
-</head>
-
-<div class="content">
-
-        <!-- <div id="navbar">
-                <a class="active" href="javascript:void(0)">Home</a>
-                <a href="javascript:void(0)">News</a>
-                <a href="javascript:void(0)">Contact</a>
-        </div> -->
-            
-    <body>
-
-        <header>
-                <div id="box"></div>
-        </header>
-            
-        <script>
-            $(function(){
-                $("#box").load('header.html');
-                });
-        </script>
-
-        <!-- <script>
-        window.onscroll = function() {myFunction()};
-        var navbar = document.getElementById("box");
-        var sticky = navbar.offsetTop;
-        
-        function myFunction() {
-            
-            if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-            
-            } else {
-            navbar.classList.remove("sticky");
-            }
-        }
-        </script> -->
+</script>
+<div id="header">
+</div>
 
 
-    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
-
-    <h6> Last updated: </h6>
-    <h6 id="demo">  </h6>
-    <script>
-        $(function() {
-          var x = new Date(document.lastModified);
-          document.getElementById("demo").innerHTML = x;
-        });
-        </script>
-    
-    <hr>   
-    
-    
-    <img id="myImg" src="Images/recirculation.png" alt="Streamlines showing recirculation zone in the lee of a bed-mounted bar" class = "center" style="width:80%;max-width:1000px">
+<div class='content'>     
+    <img id="myImg" src="../Images/recirculation.png" alt="Streamlines showing recirculation zone in the lee of a bed-mounted bar" class = "center" style="width:80%;max-width:1000px">
     <p class="caption">Figure caption: Streamlines downstream in the recirculation zone of a bed-mounted bar (units on <i>x</i> and <i>y</i> axis are in mm). The data used to make this image was obtained using stereoscopic particle image velocimetry (sPIV) in an experimental flume and was taken during this  <A HREF="tracking.html" style="text-decoration: none;" target="_blank">study</A>.</p>
-    
-    
-    <h1> Welcome!  </h1>
+     
+    <h1> Welcome to my research site:</h1>
 
     <p class="main">
-        I am a researcher with an interest in pretty much everything related to fluid mechanics, hydraulics, rivers, sediment transport and ecohydraulics. Topics like <b>computational fluid dynamics</b> (CFD), advanced experimental flow visualization techniques (<b>sPIV</b>), object tracking in 3-dimensions using <b>computer vision</b> techniques, Python GUI application development to build research tools and <b>Structure from Motion</b> photogrammetry are what are currently attracting my attention.  
+        I am currently a postdoctoral researcher with interests in fluid mechanics, open-channel flow, hydraulics, rivers, sediment transport and ecohydraulics. Topics such as computational fluid dynamics (CFD), ecohydraulics (fish passage), experimental flow visualization techniques (sPIV, PTV), object tracking in 3-dimensions using computer vision, Python GUI application development to build research tools and Structure from Motion photogrammetry are what are currenty attracting my attention.  
     </p>
     
     <p class="main">
         Feel free to browse my new site (excuse the mess, it is still very much under construction) to get a better feel of my research interests and to learn what I am currently up to. 
     </p>
 
-    <p class="main">
-        If you are interested in having me model an ecohydraulic structure for fish passage purposes or apply a 2D model to gain insights on the hydraulics of a riverian system please contact me.   
-    </p>
-
 </div>
-
-
-
-</body>
-
-                                
+                             
 </html>

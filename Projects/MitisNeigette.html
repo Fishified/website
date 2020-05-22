@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>  
+$(function(){
+    $('#header').load('../common/reuseHeader.html');
+});
+
+</script>
+<div id="header">
+</div>
+
+
+<div class='content'>
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+
+    <h2 class="title"> Towards understanding how sediment affects fish passage through baffled culverts</h2>
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img src="../Images/sed_traj.JPG" class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 1: 3D trajectory of a juvenile trout navigating above the bed-mounted bar. Two synchronized Phantom high-speed video cameras running at 300 Hz captured simultaneously both a ventral and a profile view of the fish. These views were then imported into <i>pyTracker3D</i> to reconstruct the 3D trajectory  </p>
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">2 / 3</div> -->
+            <img src="Images/recirculation.png" class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 2: Streamlines obtained from sPIV data of the flow field downstream of the bed-mounted bar. The length of the  recirculation zone is approximately that of the juvenile rainbow trout tested. </p>
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/sed_wedge.JPG"  class = "center" style="max-width:100%;max-height:400px">
+            <p class="caption">Fig. 3: Profile view of a bed-mounted bar with a sediment wedge placed in its lee. </div>
+        </p>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/sed_flume.JPG"  class = "center" style="max-width:100%;max-height:400px" >
+            <p class="caption">Fig. 4: Blender generated render of CAD drawing of the recirculatory experimental flume. Fish were allowed to volitionally enter the flume after being placed in the downstream holding area. </p>
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="Images/sed_together.JPG"  class = "center" style="max-width:100%;max-height:400px">
+            <p class="caption">Fig. 5: Centerline contour plots of hydrodyanmic variables estimated from two separate sPIV planes taken upstream and downstream of the bed-mounted bar. The blue area in the top-left plot indicates flow returning towards the bar. This return flow proved difficult for fish to navigate. </div>
+        </p>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<br>
+<br>
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+
+    <h2> Objectives:</h2>
+    <p class="inset center"> 1. Answer the question: <i>Does sediment in baffled culverts reduce the benefit baffles provide to fish passage?</i></p>
+
+    <p class="inset center"> 2. Understand how fish interact with complex turbulent recirculatory zones.</p>
+    <p class="inset center"> 3. Relate instantaneous 3D fish trajectories to time-averaged 3D flow fields.</p>        
+
+    <h2> Publication details: </h2>
+    <p class="inset center"><A HREF="https://www.sciencedirect.com/science/article/abs/pii/S0925857418303744" target="_blank"> Duguay, J.M. and Foster, B. and Lacey, R.W.J. and Castro-Santos, T. (2018). </A> Sediment infilling benefits rainbow trout passage in a baffled channel. Ecological Engineering, 125, 38-49.</p>
+
+    <p class="main">
+    This work provides insights on how fish interact with low-velocity recirculatory zones common to engineered fish passage structures. Such zones regularly appear downstream of bed-mounted objects as swift currents sweep above them. It is largely held that fish energetically benefit from these zones by actively seeking them to take refuge within them from the high velocity oncoming flow. In this study we used a combination of high-speed 3D video tracking of juvenile rainbow trout navigating an experimental flume fitted with a number of bed-mounted 'baffles' intended to improve passage performance. In a second condition, wedges of fixed sediment were placed in the lee of the bar to obstruct the formation of the recirculatory zone. What found the sediment actually improved passage performance across a number of metrics.
+    </p>        
+
+    <p class="main">
+    Without the sediment wedges in place, the fish were observed to be entrained into the turbulent recirculatory zone. The predominantly upstream directed flow within the recirculatory zone inhibited fish from holding position and, in many cases ultimately caused them to abandon their upstream attempt. By filling the recirculatory zone with sediment, passage performance was improved, because the sediment wedge eliminated the counter-current recirculatory flow thus permitting fish to better maintain postural stability while navigating upstream. This study provided the proof of concept needed to continue further research towards investigating how species exhibiting different body morphologies, spanning the range of life-cycle stages, interact with larger scale recirculatory zones commonly encountered in rivers, streams and fishways. 
+    </p>      
+
+<!------------------------------------------------>
+<!------------------------------------------------>
+<!------------------------------------------------>
+
+    <div id="player" class="center"></div>
+    <script src="//www.youtube.com/iframe_api"></script>
+
+    <script>
+        /**
+        * Put your video IDs in this array
+        */
+        var videoIDs = [
+            'W-vYpOJgS-s',
+            'sU8o6NY2L30',
+            '_fhCyUTV6I8'
+        ];
+
+        var player, currentVideoId = 0;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '400',
+                width: '100%',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.loadVideoById(videoIDs[currentVideoId]);
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                currentVideoId++;
+                if (currentVideoId < videoIDs.length) {
+                    player.loadVideoById(videoIDs[currentVideoId]);
+                }
+            }
+        }
+    </script>
+
+    <br>
+    <p class="caption">
+        Video caption: Profile views of juvenile rainbow trout (Oncorhynchus mykiss) navigating a bed-mounted bar (1st video) and the same bar with sediment obstructing the recirculation zone it the bar's lee (2nd video). The third video shows the reconstructed 3D trajectory of the fish in the 1st video. Average cross-sectional velocity in flume is 0.75 m/s, however just above the baffle it can be in excess of 1.2 m/s. Video was taken at 300 Hz and therefore the fish swims much faster in real-time.
+    </p>
+
+
+<br>
+
+<br>
+<br>
+<br>
+
+
+</div>
+</body>
+
+</html> 

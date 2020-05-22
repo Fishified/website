@@ -2,48 +2,19 @@
 <html>
 <head>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149579272-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-  gtag('config', 'UA-149579272-1');
-</script>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <title> Home: Jason Duguay, PhD. </title>
-        
-        <link rel = "stylesheet" href="styles.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-
-<div class="content">
-<body>
-
-    <header>
-            <div id="box"></div>
-    </header>
-        
-    <script>
-        $(function(){
-            $("#box").load('header.html');
-            });
+    <script>  
+    $(function(){
+        $('#header').load('../common/reuseHeader.html');
+    });
+    
     </script>
+    <div id="header">
+    </div>
 
-    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
-
-    <h6> Last updated: </h6>
-    <h6 id="demo">  </h6>
-    <script>
-        $(function() {
-        var x = new Date(document.lastModified);
-        document.getElementById("demo").innerHTML = x;
-        });
-        </script>
-    <hr>   
+    
+    <div class='content'>
 
 
 <!------------------------------------------------>
@@ -58,7 +29,7 @@
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">1 / 3</div> -->
-            <img src="Images/turners_flume.JPG" class = "center" style="max-width:100%;max-height:400px" >
+            <img src="../Images/turners_flume.JPG" class = "center" style="max-width:100%;max-height:400px" >
             <p class="caption">Fig. 1: Rendered image of the experimental flume used to perform this study. The ABiKiS flume (Aquatic Biomechanics and Kinematic Research Station) is situated at the United States Geological Survey-Leetown Science Center in Turners Falls, Massachusetts. Fish were placed in the downstream staging area and allowed to volitionally make attempts up the flume during the trial period.</p>
         </div>
 
@@ -66,31 +37,31 @@
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="Images/turners_baffles.png"  class = "center" style="max-width:90%;max-height:400px">
+            <img src="../Images/turners_baffles.png"  class = "center" style="max-width:90%;max-height:400px">
             <p class="caption">Fig. 2: The three different baffle configurations tested. Trials of the bare flume were also performed. The most spatially dense spoiler baffle configuration is depicted on the left, the full-width weir baffle in the center and the lower density spoiler baffle configuration on the right.</div>
         </p>
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="Images/turners_results.png"  class = "center" style="max-width:100%;max-height:400px" >
+            <img src="../Images/turners_results.png"  class = "center" style="max-width:100%;max-height:400px" >
             <p class="caption">Fig. 3: Maximum distances of ascent for the various baffle conditions, species of trout and flow rates tested. The bare flume is seen to be the least effective at improve the maximum distances of ascent. The weir baffles, in contrast, allow even the smallest fish tested to reach the upper reach of the test section.</p>
         </div>
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="Images/turners_cameras.JPG"  class = "center" style="max-width:100%;max-height:400px">
+            <img src="../Images/turners_cameras.JPG"  class = "center" style="max-width:100%;max-height:400px">
             <p class="caption">Fig. 4: View of the flume looking downstream towards the staging area. The mirrors were put into place to capture ventral views of the ascending trout. Each mirror was dedicated a Raspberry Pi to record the ascending fish over the trial duration. </div>
         </p>
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="Images/turners_mirrors.JPG"  class = "center" style="max-width:100%;max-height:400px">
+            <img src="../Images/turners_mirrors.JPG"  class = "center" style="max-width:100%;max-height:400px">
             <p class="caption">Fig. 5: View of the flume looking upstream with the weir baffles in place. The flow rapidly attains its normal depth downstream of the hydraulic jump that occurs over the hydraulically rougher section where the weir baffles were installed. </div>
         </p>
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">2 / 3</div> -->
-            <img src="Images/turners_dmax.JPG" class = "center" style="max-width:100%;max-height:400px" >
+            <img src="../Images/turners_dmax.JPG" class = "center" style="max-width:100%;max-height:400px" >
             <p class="caption">Fig. 6: Statistically derived survival curves showing the proportion of attempting trout expected to attain a given distance over the test section. In general, the bare flume was the most challenging, smaller fish presented more difficulty, smaller fish benefited most from the weir baffles, slight improvements were made with a denser spoiler baffle configuration and brown trout demonstrated lower maximum distances of ascent than brook trout.  </p>
         </div>
 

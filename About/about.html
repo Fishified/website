@@ -1,84 +1,24 @@
 <!doctype html>
 <html>
 
-<head>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149579272-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-149579272-1');
-</script>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<title> Home: Jason Duguay, PhD. </title>
 
-<link rel = "stylesheet" href="styles.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>  
+$(function(){
+    $('#header').load('../common/reuseHeader.html');
+});
 
-</head>
-
-<div class="content">
-
-        <!-- <div id="navbar">
-                <a class="active" href="javascript:void(0)">Home</a>
-                <a href="javascript:void(0)">News</a>
-                <a href="javascript:void(0)">Contact</a>
-        </div> -->
-            
-    <body>
-
-        <header>
-                <div id="box"></div>
-        </header>
-            
-        <script>
-            $(function(){
-                $("#box").load('header.html');
-                });
-        </script>
-
-        <!-- <script>
-        window.onscroll = function() {myFunction()};
-        var navbar = document.getElementById("box");
-        var sticky = navbar.offsetTop;
-        
-        function myFunction() {
-            
-            if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-            
-            } else {
-            navbar.classList.remove("sticky");
-            }
-        }
-        </script> -->
-
-
-    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
-
-    <h6> Last updated: </h6>
-    <h6 id="demo">  </h6>
-    <script>
-        $(function() {
-          var x = new Date(document.lastModified);
-          document.getElementById("demo").innerHTML = x;
-        });
-        </script>
+</script>
+<div id="header">
+</div>
+      
     
-    <hr>   
-    
-    
-    <img id="myImg" src="Images/recirculation.png" alt="Streamlines showing recirculation zone in the lee of a bed-mounted bar" class = "center" style="width:80%;max-width:1000px">
+<div class='content'>  
+
+    <img id="myImg" src="../Images/recirculation.png" alt="Streamlines showing recirculation zone in the lee of a bed-mounted bar" class = "center" style="width:80%;max-width:1000px">
     <p class="caption">Figure caption: Streamlines downstream in the recirculation zone of a bed-mounted bar. The data used to make this image was obtained using stereoscopic particle image velocimetry (sPIV) in an experimental flume and was taken during this  <A HREF="tracking.html" style="text-decoration: none;" target="_blank">study</A>.</p>
     
-    
-
-    <h1> <a name="About"> About me </a> </h1>
+    <h1> <a name="About"> A little about myself: </a> </h1>
 
     <p class="main">
         Since 2012 I have been answering questions occurring at the cross-roads of hydraulic and environmental engineering. A large portion of this work has been devoted to improving fish passage through engineered hydraulic structures (i.e., roadway culverts and dams). 
@@ -93,7 +33,7 @@
     </p>
 
     <p class="main">
-        My plan is to continue pursuing projects, either in academia or in industry, with a strong emphasis on hydrotechnics, ecological hydraulics and applied research. If you have a project idea or opportunity which you believe may benefit from my experience, don’t hesitate to get in contact, I would be happy to discuss.
+        My plan is to continue pursuing projects, either in academia or in industry, with a strong emphasis on the application of computational fluid dynamics and experimental methods to address fundamental and applied questions in the field of ecohydraulics.
     </p>
 
 

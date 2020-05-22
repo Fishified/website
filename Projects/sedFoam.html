@@ -2,48 +2,21 @@
 <html>
 <head>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149579272-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-  gtag('config', 'UA-149579272-1');
-</script>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <title> Home: Jason Duguay, PhD. </title>
-        
-        <link rel = "stylesheet" href="styles.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-
-<div class="content">
-<body>
-
-    <header>
-            <div id="box"></div>
-    </header>
-        
-    <script>
-        $(function(){
-            $("#box").load('header.html');
-            });
+    <script>  
+    $(function(){
+        $('#header').load('../common/reuseHeader.html');
+    });
+    
     </script>
+    <div id="header">
+    </div>
 
-    <p class="center"> <strong>Jason Duguay, PhD. </strong> <br> Postdoctoral fellow Université de Sherbrooke <br> Sherbrooke, Québec <br> Phone: 819-588-0251 <br> E-mail: duguay.jason@gmail.com </p>
+    
+    <div class='content'>
 
-    <h6> Last updated: </h6>
-    <h6 id="demo">  </h6>
-    <script>
-        $(function() {
-        var x = new Date(document.lastModified);
-        document.getElementById("demo").innerHTML = x;
-        });
-        </script>
-    <hr>   
 
 
 <!------------------------------------------------>
